@@ -1,0 +1,198 @@
+.carousel {
+  width: 35rem;
+  height: 43rem;
+  /* background-color: beige; */
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-items: center;
+  /* display: flex; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13.5rem;
+  /* background-color: #533c1b; */
+  /* background-color: #533c1b;
+  border-radius: 1.5rem; */
+}
+
+/* .card-container {
+  border: 1px solid red;
+  width: 30%;
+  text-align: center;
+  margin: 0, auto;
+} */
+/* img {
+  /* width: 50rem; */
+.Stitle,
+.Ssubtitle,
+ul {
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: normal;
+  list-style: none;
+  font-size: 20px;
+  margin-top: 0.8rem;
+  margin-left: 3rem;
+  color: black;
+}
+ul {
+  margin-top: 1.5rem;
+}
+li {
+  margin-top: 1rem;
+}
+.Stitle {
+  font-weight: bolder;
+  color: black;
+  font-size: 28px;
+  /* margin-left: 3rem; */
+  text-align: start;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-indent: 2rem;
+}
+.Ssubtitle {
+  font-weight: bold;
+  color: #87652d;
+  /* color: #85572f; */
+  font-size: 25px;
+  text-align: center;
+  margin-left: 0.2rem;
+  text-indent: 2rem;
+
+  /* text-align: start; */
+}
+
+.Suitescard {
+  background-color: #533c1b;
+  height: 22rem;
+  /* padding-top: 0.1rem; */
+  border-radius: 2rem;
+  /* border-style: ridge;
+  border-color: black; */
+
+  /* border-width: 2px; */
+}
+.star {
+  /* padding-bottom: 1rem; */
+  /* margin-top: 0.9rem; */
+  margin-bottom: 0.4rem;
+  color: #a2652d;
+}
+@media screen and (min-width: 320px) {
+  .carousel {
+    width: 20rem;
+    height: 38rem;
+    margin-top: 13.5rem;
+  }
+  .Stitle {
+    font-weight: bolder;
+    color: black;
+    font-size: 20px;
+    /* margin-left: 3rem; */
+    text-align: start;
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+    text-indent: 1rem;
+  }
+  .Ssubtitle {
+    font-size: 17px;
+    text-align: center;
+    margin-left: 0.2rem;
+    text-indent: 1rem;
+  }
+  ul {
+    font-weight: 400;
+    font-weight: bolder;
+
+    letter-spacing: normal;
+    list-style: none;
+    font-size: 17px;
+    margin-top: 0.3rem;
+    margin-left: 3px;
+    text-indent: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel {
+    width: 40rem;
+    height: 46rem;
+    margin-top: 13.5rem;
+  }
+  .Stitle {
+    font-weight: 500;
+    font-weight: bolder;
+    color: black;
+    font-size: 28px;
+    /* margin-left: 3rem; */
+    text-align: start;
+    margin-top: 1rem;
+    padding-top: 2rem;
+
+    text-indent: 2rem;
+  }
+  .Ssubtitle {
+    font-size: 23px;
+    text-align: center;
+    margin-left: 0.1rem;
+    text-indent: 2.5rem;
+    margin-right: 10px;
+  }
+  ul {
+    font-weight: 400;
+    font-weight: bolder;
+
+    letter-spacing: normal;
+    list-style: none;
+    font-size: 21px;
+    margin-top: 0.3rem;
+    margin-left: 20px;
+  }
+  li {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel {
+    width: 50rem;
+    height: 55rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13.5rem;
+    z-index: -1;
+  }
+  .Suitescard {
+    background-color: #533c1b;
+    height: 25rem;
+    /* padding-top: 0.1rem; */
+    border-radius: 2rem;
+  }
+  .Stitle {
+    font-weight: 800;
+    font-weight: bolder;
+    color: black;
+    font-size: 30px;
+    /* margin-left: 3rem; */
+
+    margin-top: 1rem;
+    padding-top: 2rem;
+  }
+  .Ssubtitle {
+    font-size: 27px;
+    text-align: center;
+    margin-left: 0.1rem;
+    text-indent: 4rem;
+    text-indent: 20px;
+  }
+  ul {
+    font-weight: 400;
+    font-weight: bolder;
+
+    letter-spacing: normal;
+    list-style: none;
+    font-size: 24px;
+    margin-top: 0.3rem;
+    margin-left: 28px;
+  }
+}

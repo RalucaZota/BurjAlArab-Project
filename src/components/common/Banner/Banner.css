@@ -1,0 +1,61 @@
+/* Banner */
+.banner {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--mainWhite);
+  padding: 2rem 1rem;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+}
+.banner h1 {
+  font-size: 2.5rem;
+}
+.banner div {
+  width: 10rem;
+  height: 5px;
+  background: #533c1b;
+  margin: 1.7rem auto;
+}
+.banner p {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 320px) {
+  .banner {
+    width: 250px;
+    height: 235px;
+  }
+  .banner h1 {
+    font-size: 18px;
+  }
+  .banner p {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    width: 450px;
+    height: 300px;
+  }
+  .banner h1 {
+    font-size: 30px;
+  }
+  .banner p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner {
+    width: 600px;
+    height: 320px;
+  }
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner p {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+}

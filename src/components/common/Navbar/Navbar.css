@@ -1,0 +1,189 @@
+:root {
+  --primaryColor: #533c1b;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+  padding: 0;
+
+  margin-top: -30px;
+  background: transparent;
+  z-index: 1;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  font-size: small;
+  align-items: center;
+
+  height: 140px;
+
+  margin-right: 0rem;
+}
+
+.navbar.active {
+  background: rgb(223, 236, 236);
+  background: linear-gradient(
+    0deg,
+    rgba(223, 236, 236, 1) 29%,
+    rgba(158, 153, 150, 1) 73%
+  );
+  border-radius: 12px;
+  border-color: #533c1b;
+  border-width: 8px;
+  border-bottom-style: groove;
+}
+
+.nav-icon {
+  font-size: 2rem;
+  color: black;
+}
+.sigla {
+  margin-top: -65px;
+  padding-top: 90px;
+  padding-left: 10px;
+  height: 220px;
+  width: 270px;
+}
+
+@media screen and (min-width: 320px) {
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 280px;
+  }
+  .sigla {
+    display: none;
+  }
+}
+.nav-links {
+  width: 75%;
+  height: 400px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  justify-content: flex-end;
+  transition: var(--mainTransition);
+}
+.home,
+.rooms,
+.dinning,
+.facilities,
+.bookingform {
+  text-decoration: none;
+  color: #222;
+  font-size: 30px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.nav-links a:hover {
+  background: rgb(139, 102, 41);
+  background: linear-gradient(
+    0deg,
+    rgba(139, 102, 41, 1) 35%,
+    rgba(223, 219, 218, 1) 78%
+  );
+  color: black;
+  border-radius: 8px;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background: rgb(206, 213, 231);
+    background: linear-gradient(
+      0deg,
+      rgba(206, 213, 231, 1) 42%,
+      rgba(71, 79, 147, 1) 79%
+    );
+
+    left: 25px;
+    transition: all 0.5s ease-out;
+    width: 80%;
+    opacity: 0.7;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  .home,
+  .rooms,
+  .facilities,
+  .dinning,
+  .bookingform {
+    color: black;
+    text-align: center;
+    padding-left: 0px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+
+    font-size: 30px;
+
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+  }
+  .navbar.active {
+    display: none;
+  }
+}
+
+.show-nav {
+  height: 1px;
+}
+@media screen and (min-width: 865px) {
+  .nav-btn {
+    display: none;
+    padding-top: 100px;
+    margin-left: 0rem;
+    padding-left: 1rem;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 5rem;
+    padding-left: 0rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    padding-left: 0rem;
+    margin-left: 0rem;
+  }
+  .sigla {
+    display: block;
+  }
+}

@@ -1,0 +1,26 @@
+article p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.roomContainer {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 5rem;
+  grid-column-gap: 80px;
+}
+
+@media only screen and (min-width: 0px) {
+  .display {
+    padding-left: 40px;
+    padding-top: 15px;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  .display {
+    padding-left: 12.5rem;
+    padding-top: 15px;
+  }
+}

@@ -1,0 +1,42 @@
+/* Hero */
+
+@media screen and (min-width: 320px) {
+  .defaultHero,
+  .roomsHero,
+  .dinningHero,
+  .facilitiesHero,
+  .bookingHero,
+  .singlePageHero {
+    min-height: 100vh;
+    background: url("../../../images/HOMEIMG/1.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .roomsHero {
+    background-image: url("../../../images/ROOMSIMG/2.jpg");
+    min-height: 100vh;
+    /* min-height: calc(100vh - 0px); */
+  }
+  .dinningHero {
+    background-image: url("../../../images/DINNINGIMG/1.jpg");
+    /* min-height: 60vh; */
+    min-height: calc(100vh - 0px);
+  }
+  .facilitiesHero {
+    background-image: url("../../../images/FACILITIESIMG/spa/spa1.jpg");
+    /* min-height: 60vh; */
+    min-height: calc(100vh - 0px);
+  }
+  .bookingHero {
+    background-image: url("../../../images/HOMEIMG/b1.jpg");
+    /* min-height: 60vh; */
+    min-height: calc(100vh - 0px);
+  }
+  .singlePageHero {
+    background-image: url("../../../images/HOMEIMG/cover4.jpg");
+    /* min-height: 60vh; */
+    min-height: calc(100vh);
+  }
+}

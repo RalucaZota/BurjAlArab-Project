@@ -1,0 +1,27 @@
+.image-heading {
+}
+.image-heading .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.image-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  height: 30vh;
+  width: 100%;
+  z-index: -1;
+}
+.image-heading h1 {
+  /* font-size: 40px;
+  text-transform: capitalize; */
+}
+@media screen and (min-width: 300px) {
+  .image-heading h1 {
+    font-size: 20px;
+  }
+}
