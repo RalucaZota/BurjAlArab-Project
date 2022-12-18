@@ -13,7 +13,7 @@
   content: "";
   width: 100%;
   height: 40vh;
-  /* background: #eaf8f1; */
+
   position: absolute;
   top: 0;
   left: 0;
@@ -83,7 +83,6 @@
   background: black;
 }
 .popular .cards h3 {
-  /* color: #31b675; */
   font-weight: 500;
 }
 .popular .cards h3 span {
@@ -94,7 +93,7 @@
 .popular .content {
   margin-bottom: 50px;
 }
-/*----- control btn -------*/
+
 .popular .control-btn .next,
 .popular .control-btn .prev {
   top: 100%;
@@ -115,10 +114,9 @@
 }
 .popular .control-btn .prev i:hover,
 .popular .control-btn .next i:hover {
-  /* background: #31b675; */
   color: white;
 }
-/*----- control btn -------*/
+
 @media screen and (max-width: 768px) {
   .popular .control-btn .prev {
     left: 40%;

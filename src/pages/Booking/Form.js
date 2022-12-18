@@ -3,25 +3,41 @@ import { useState, useEffect, reset } from "react";
 import { Dropdown } from "react-bootstrap";
 import "../Booking/Form.css";
 import DropdownButton from "./DropdownButton";
+import useInput from "./hooks/use-input";
 
-export default function Form() {
-  const [lastName, setLastName] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
+export default function Form(props) {
+  const isNotEmpty = (value) => value.trim() !== "";
+  const isEmail = (value) => value.includes("@");
+  const {
+    value: enteredLastName,
+    hasError: lastnameHasError,
+    isValid: enteredLastNameisValid,
+    valueChangeHandler: lastnameChangeHandler,
+    inputBlurHandler: lastnameBlurHandler,
+    reset: resetLastnameValue,
+  } = useInput(isNotEmpty);
+
+  const {
+    value: enteredFirstName,
+    hasError: firstnameHasError,
+    isValid: enteredFirstNameisValid,
+    valueChangeHandler: firstnameChangeHandler,
+    inputBlurHandler: firstNameInputBlurHandler,
+    reset: resetFirstnameValue,
+  } = useInput(isNotEmpty);
+
+  const {
+    value: enteredEmail,
+    hasError: emailHasError,
+    isValid: enteredEmailisValid,
+    valueChangeHandler: emailChangeHandler,
+    inputBlurHandler: emailInputBlurHandler,
+    reset: resetEmailValue,
+  } = useInput(isEmail);
+
   const [room, setRoom] = useState("");
-  const [value, setValue] = useState("Choose a room");
+  const [roomValue, setRoomValue] = useState("Choose a room");
   const [message, setMessage] = useState("");
-  const [lastNameisTouched, setLastNameisTouched] = useState(false);
-  const [FirstNameisTouched, setFirstNameisTouched] = useState(false);
-  const [emailisTouched, setEmailisTouched] = useState(false);
-
-  const enteredLastNameisValid = lastName.trim() !== "";
-  const enteredFirstNameisValid = firstName.trim() !== "";
-  const enteredEmailisValid = email.trim() && email.includes("@") !== "";
-
-  const LastNameisInvalid = !enteredLastNameisValid && lastNameisTouched;
-  const FirstNameisInvalid = !enteredFirstNameisValid && FirstNameisTouched;
-  const EmailisInvalid = !enteredEmailisValid && emailisTouched;
 
   let formIsValid = false;
 
@@ -42,24 +58,22 @@ export default function Form() {
     ) {
       return;
     }
-    console.log(lastName, firstName);
+    console.log(enteredLastName, enteredFirstName);
     // setFirstName("");
     // setLastName("");
     // setEmail("");
-    setLastNameisTouched(false);
-    setFirstNameisTouched(false);
-    setEmailisTouched(false);
+
     e.target.reset();
 
     try {
       let reserv = await fetch(
-        "https://booking-form-4720c-default-rtdb.firebaseio.com/booking.json",
+        "https://bookingform1-2def0-default-rtdb.firebaseio.com/booking.json",
         {
           method: "POST",
           body: JSON.stringify({
-            lastname: lastName,
-            firstName: firstName,
-            email: email,
+            lastname: enteredLastName,
+            firstName: enteredFirstName,
+            email: enteredEmail,
             room: room,
           }),
           headers: {
@@ -70,9 +84,9 @@ export default function Form() {
       let data = await reserv.json();
       console.log(data);
       if (reserv.status === 200) {
-        setFirstName("");
-        setLastName("");
-        setEmail("");
+        resetFirstnameValue("");
+        resetLastnameValue("");
+        resetEmailValue("");
         setRoom("");
         setMessage(
           "You have successfully booked your room. Further details will be sent by email."
@@ -86,26 +100,16 @@ export default function Form() {
       console.log(error);
     }
   };
-  const firstNameInputBlurHandler = (e) => {
-    setFirstNameisTouched(true);
-  };
-
-  const lastNameInputBlurHandler = (e) => {
-    setLastNameisTouched(true);
-  };
-  const emailInputBlurHandler = (e) => {
-    setEmailisTouched(true);
-  };
   //if an input loses focused, definetely was touched/ the user had a change to work on it
 
   const handleSelect = (e) => {
     console.log(e);
-    setValue(e);
-    setRoom("");
+    setRoom(e);
+    // setRoomValue("");
   };
 
   const nameInputClasses =
-    FirstNameisInvalid && LastNameisInvalid && EmailisInvalid
+    firstnameHasError && lastnameHasError && emailHasError
       ? "form-control invalid"
       : "form-control";
 
@@ -117,13 +121,13 @@ export default function Form() {
             <label htmlFor="FirstName">First Name</label>
             <input
               type="text"
-              value={firstName}
+              value={enteredFirstName}
               id="FirstName"
               placeholder="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={firstnameChangeHandler}
               onBlur={firstNameInputBlurHandler}
             />
-            {FirstNameisInvalid && (
+            {firstnameHasError && (
               <p className="error-text">First Name must not be empty.</p>
             )}
           </div>
@@ -132,13 +136,13 @@ export default function Form() {
             <label htmlFor="LastName">Last Name</label>
             <input
               type="text"
-              value={lastName}
+              value={enteredLastName}
               id="LastName"
               placeholder="Last Name"
-              onChange={(e) => setLastName(e.target.value)}
-              onBlur={lastNameInputBlurHandler}
+              onChange={lastnameChangeHandler}
+              onBlur={lastnameBlurHandler}
             />
-            {LastNameisInvalid && (
+            {lastnameHasError && (
               <p className="error-text">Last Name must not be empty.</p>
             )}
           </div>
@@ -146,25 +150,21 @@ export default function Form() {
             <label htmlFor="Email">Email Address</label>
             <input
               type="email"
-              value={email}
+              value={enteredEmail}
               id="Email"
               placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={emailChangeHandler}
               onBlur={emailInputBlurHandler}
             />
-            {EmailisInvalid && (
+            {emailHasError && (
               <p className="error-text">Email address must not be empty.</p>
             )}
           </div>
           <div>
-            <DropdownButton
-              // value="Choose your room"
-              // placeholder="Choose your room"
-              onSelect={handleSelect}
-            />
+            <DropdownButton onSelect={handleSelect} />
           </div>
           <div className="form-actions">
-            <button type="submit" className="submit">
+            <button type="submit" className="submit" disabled={!formIsValid}>
               Submit
             </button>
           </div>

@@ -4,12 +4,11 @@ article p {
 }
 
 .roomContainer {
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-row-gap: 5rem;
-  grid-column-gap: 80px;
+  justify-content: space-around;
 }
 
 @media only screen and (min-width: 0px) {

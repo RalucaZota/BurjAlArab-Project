@@ -10,7 +10,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* z-index: -1; */
+
   align-items: center;
   display: block;
   margin-left: auto;
@@ -20,7 +20,7 @@
 .heading h1 {
   font-size: 2rem;
   letter-spacing: var(--mainSpacing);
-  /* text-transform: capitalize; */
+
   margin-bottom: 1rem;
   margin-top: 2rem;
   text-shadow: 2px;

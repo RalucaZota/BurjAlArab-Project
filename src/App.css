@@ -2,6 +2,10 @@
 
 body {
   font-family: "Josefin Sans", cursive;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 * {
@@ -21,7 +25,7 @@ body {
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
-/* globals */
+
 body {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -93,8 +97,7 @@ h6 {
   padding: 1rem;
   letter-spacing: var(--mainSpacing);
 }
-/* crowny
- */
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -181,15 +184,11 @@ input {
 }
 
 .row {
-  /* width: 100%;
-  padding-left: 2.5rem; */
 }
 .top {
   margin-top: 100px;
 }
-/* .mtop {
-  margin-top: 50px;
-} */
+
 .heading {
   text-align: center;
   padding: 50px 0 50px 0;
@@ -205,7 +204,7 @@ input {
   margin: 1.7rem auto;
 }
 
-*/ .full_container {
+.full_container {
   max-width: 95%;
   margin: auto;
 }

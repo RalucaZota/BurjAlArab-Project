@@ -1,26 +1,12 @@
 .carousel {
   width: 35rem;
   height: 43rem;
-  /* background-color: beige; */
-  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  align-items: center;
-  /* display: flex; */
+
   margin-left: auto;
   margin-right: auto;
   margin-top: 13.5rem;
-  /* background-color: #533c1b; */
-  /* background-color: #533c1b;
-  border-radius: 1.5rem; */
 }
 
-/* .card-container {
-  border: 1px solid red;
-  width: 30%;
-  text-align: center;
-  margin: 0, auto;
-} */
-/* img {
-  /* width: 50rem; */
 .Stitle,
 .Ssubtitle,
 ul {
@@ -43,7 +29,7 @@ li {
   font-weight: bolder;
   color: black;
   font-size: 28px;
-  /* margin-left: 3rem; */
+
   text-align: start;
   margin-top: 1rem;
   padding-top: 1rem;
@@ -53,28 +39,20 @@ li {
 .Ssubtitle {
   font-weight: bold;
   color: #87652d;
-  /* color: #85572f; */
+
   font-size: 25px;
   text-align: center;
   margin-left: 0.2rem;
   text-indent: 2rem;
-
-  /* text-align: start; */
 }
 
 .Suitescard {
   background-color: #533c1b;
   height: 22rem;
-  /* padding-top: 0.1rem; */
-  border-radius: 2rem;
-  /* border-style: ridge;
-  border-color: black; */
 
-  /* border-width: 2px; */
+  border-radius: 2rem;
 }
 .star {
-  /* padding-bottom: 1rem; */
-  /* margin-top: 0.9rem; */
   margin-bottom: 0.4rem;
   color: #a2652d;
 }
@@ -88,7 +66,7 @@ li {
     font-weight: bolder;
     color: black;
     font-size: 20px;
-    /* margin-left: 3rem; */
+
     text-align: start;
     margin-top: 1rem;
     padding-top: 1rem;
@@ -124,7 +102,7 @@ li {
     font-weight: bolder;
     color: black;
     font-size: 28px;
-    /* margin-left: 3rem; */
+
     text-align: start;
     margin-top: 1rem;
     padding-top: 2rem;
@@ -165,7 +143,7 @@ li {
   .Suitescard {
     background-color: #533c1b;
     height: 25rem;
-    /* padding-top: 0.1rem; */
+
     border-radius: 2rem;
   }
   .Stitle {
@@ -173,7 +151,6 @@ li {
     font-weight: bolder;
     color: black;
     font-size: 30px;
-    /* margin-left: 3rem; */
 
     margin-top: 1rem;
     padding-top: 2rem;
