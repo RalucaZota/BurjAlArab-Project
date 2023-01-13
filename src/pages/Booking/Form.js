@@ -67,7 +67,7 @@ export default function Form(props) {
 
     try {
       let reserv = await fetch(
-        "https://bookingform1-2def0-default-rtdb.firebaseio.com/booking.json",
+        "https://bookingform2-757b9-default-rtdb.firebaseio.com/booking.json",
         {
           method: "POST",
           body: JSON.stringify({
