@@ -17,6 +17,13 @@ article p {
     padding-top: 15px;
   }
 }
+@media only screen and (min-width: 360px) and (max-width: 430px)  {
+  .roomContainer div img{
+    border: 1px solid red;
+    max-width: 390px;
+
+  }
+}
 @media only screen and (min-width: 1140px) {
   .display {
     padding-left: 12.5rem;

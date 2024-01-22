@@ -35,13 +35,13 @@ const SinglePage = (props) => {
 
       <section className="roomContainer">
         <div>
-          <img src={item.img} height="350rem" width="550rem"></img>
+          <img src={item.img} height="350rem"></img>
         </div>
         <div>
-          <img src={item.Img_one} height="350rem" width="550rem"></img>
+          <img src={item.Img_one} height="350rem" ></img>
         </div>
         <div>
-          <img src={item.Img_two} height="350rem" width="550rem"></img>
+          <img src={item.Img_two} height="350rem"></img>
         </div>
       </section>
       <div className="display">

@@ -8,7 +8,6 @@ import SuitesCarousel from "./SuitesCarousel/SuitesCarousel";
 import SuitesTitle from "./SuitesCarousel/SuitesTitle";
 
 export default function Home() {
-  console.log("merge");
 
   return (
     <>

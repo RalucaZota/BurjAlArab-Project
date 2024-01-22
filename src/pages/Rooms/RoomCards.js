@@ -14,7 +14,7 @@ const RoomCards = ({
           <i className="fas fa-external-link-alt"></i>
         </div>
         <div className="title">
-          <h3>{title} </h3>
+          <h3>{title}</h3>
         </div>
       </div>
     </Link>

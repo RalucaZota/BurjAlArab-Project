@@ -4,7 +4,9 @@
     font-weight: bolder;
   }
   .footer-links {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
   }
 }
 
