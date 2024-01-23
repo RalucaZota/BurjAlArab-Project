@@ -30,3 +30,38 @@ article p {
     padding-top: 15px;
   }
 }
+.roomContainer img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Spațiu între imagini */
+}
+
+/* Stil pentru ecrane mai mici de 756px */
+@media (min-width: 0px) and (max-width: 1200px) {
+  .roomContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aliniere pe orizontală în centru */
+  }
+
+  .roomContainer img {
+    max-width: 100%;
+  }
+}
+
+/* Stil pentru ecrane mai mari sau egale cu 756px */
+@media (min-width: 1201px) {
+  .roomContainer {
+    display: flex;
+    flex-direction: row; /* Așezare pe orizontală */
+    justify-content: space-between; /* Spațiere între imaginile orizontale */
+  }
+  .roomContainer div {
+    width: 33%;
+  }
+
+  .roomContainer img { /* Calcularea lățimii pentru cele 3 imagini cu spațiu între ele */
+    max-width: none;
+    height: 350px; /* Anularea max-width pentru a menține proporțiile originale ale imaginilor */
+  }
+}

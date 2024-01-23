@@ -23,7 +23,7 @@ const SinglePage = (props) => {
 
   return (
     <>
-      <HeadTitle />
+      {/* <HeadTitle /> */}
       <Hero hero="singlePageHero">
         <Banner title="Welcome to our accomodation">
           <Link to="/rooms" className="btn-primary">
@@ -35,13 +35,13 @@ const SinglePage = (props) => {
 
       <section className="roomContainer">
         <div>
-          <img src={item.img} height="350rem"></img>
+          <img src={item.img} className="special-img"></img>
         </div>
         <div>
-          <img src={item.Img_one} height="350rem" ></img>
+          <img src={item.Img_one}  ></img>
         </div>
         <div>
-          <img src={item.Img_two} height="350rem"></img>
+          <img src={item.Img_two} ></img>
         </div>
       </section>
       <div className="display">

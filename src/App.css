@@ -257,7 +257,7 @@ input {
     margin-left: 0px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 90%;
     align-items: center;
