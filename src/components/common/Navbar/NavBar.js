@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import logo2 from "./logo2.png";
-
 import { useState } from "react";
 import { FaAlignRight } from "react-icons/fa";
 import { Link } from "react-router-dom";

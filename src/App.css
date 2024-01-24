@@ -78,7 +78,8 @@ h6 {
 }
 .btn-primary:hover {
   background: transparent;
-  color: var(--primaryColor);
+  color:var(--mainWhite);
+  border-color: var(--mainWhite);
 }
 .loading {
   text-transform: capitalize;

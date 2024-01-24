@@ -60,6 +60,12 @@
     height: 37%;
   }
 }
+@media screen and (min-width: 320px) {
+.alice-carousel__wrapper{
+  width: 20%;
+
+}
+}
 @media screen and (min-width: 768px) {
   .container2 {
     height: 32rem;
