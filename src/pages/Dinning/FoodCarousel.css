@@ -59,12 +59,31 @@
     width: 20rem;
     height: 37%;
   }
+  .alice-carousel {
+    width: 125%;
+  }
 }
-@media screen and (min-width: 320px) {
-.alice-carousel__wrapper{
-  width: 20%;
-
+@media screen and (min-width: 320px) and (max-width: 450px){
+  .alice-carousel {
+    margin-left: -110px;
+    width: 125%;
+  }
 }
+@media screen and (min-width: 451px) and (max-width: 700px){
+  .alice-carousel {
+    margin-left: -50px;
+    width: 88%;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 900px){
+  .alice-carousel {
+    width: 88%;
+  }
+}
+@media screen and (min-width: 900px){
+  .alice-carousel {
+    width: 85%;
+  }
 }
 @media screen and (min-width: 768px) {
   .container2 {
